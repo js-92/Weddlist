@@ -1,0 +1,374 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MainMasterPage.master.cs" Inherits="MainMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Weddlist</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta name="description" content="Weddlist" />
+<meta name="keywords" content="wedding, wedding vendor, wedding vendor directory, HTML template, html theme, wedding html template, wedding html theme, weddlist, weddlist html, weddlist html template">
+<meta name="author" content="udayraj" />
+<meta name="MobileOptimized" content="320" />
+<link href="images/favicon.ico" rel="icon" type="image/x-icon"/> <!-- favicon -->
+<!-- theme style -->
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/> <!-- bootstrap css -->
+<!-- revolution -->   
+<link rel="stylesheet" type="text/css" href="revolution/css/settings.css"> <!-- revolution setting css -->
+<link rel="stylesheet" type="text/css" href="revolution/css/layers.css">  <!-- revolution layer css --> 
+<!-- end revolution -->
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/> <!-- fontawesome css -->
+<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet"> <!-- google fonts -->
+<link href="css/menumaker.css" rel="stylesheet" type="text/css"/> <!-- menu css -->
+<link href="css/owl.carousel.css" rel="stylesheet" type="text/css"/> <!-- owl carousel css -->
+<link href="css/magnific-popup.css" rel="stylesheet" type="text/css"/> <!-- magnify popup css -->
+<link href="css/datepicker.css" rel="stylesheet" type="text/css"/> <!-- datepicker css -->
+<link href="css/flaticon.css" rel="stylesheet" type="text/css"/> <!-- flaticon css -->
+<link href="css/style.css" rel="stylesheet" type="text/css"/> <!-- custom css -->
+<link href="css/stucture.css" rel="stylesheet" type="text/css"/> <!-- stucture css -->
+<!-- end theme style -->
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <!-- preloader --> 
+  <div class="preloader">
+    <div class="status">
+      <div class="status-message">
+      </div>
+    </div>
+  </div>
+<!-- end preloader --> 
+<!--  top bar -->
+  <section class="top-nav-info">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="top-text">Welcome to Weddlist</div>
+        </div>
+        <div class="col-sm-6">
+          <div class="top-detail text-right">
+            <ul>
+              <li><a href="Help.aspx">Help</a></li>
+              <li><a href="#" data-toggle="modal" data-target="#tandc-model">Terms And Condition</a></li>
+              <li><a href="#" data-toggle="modal" data-target="#register-model">Register</a></li>
+              <li><a href="#" data-toggle="modal" data-target="#login-model">Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- login popup -->
+      <div class="modal fade login-model" id="login-model" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h5 class="modal-title text-center">Login</h5>
+            </div>
+            <div class="modal-body login-model-body text-center">
+              <form id="login-form" action="#">
+                <div class="form-group">
+                    <asp:TextBox ID="TextBox1" runat="server" class="form-control" placeholder="Enter Email"></asp:TextBox>
+                    <asp:TextBox ID="TextBox2" runat="server" class="form-control" placeholder="Enter Password"></asp:TextBox>
+                </div>
+                  <asp:Button ID="Button1" runat="server" Text="Login" class="btn btn-default" OnClick="Button1_Click" Font-Italic="False" Font-Bold="True" />
+              </form>
+            </div>            
+          </div>
+        </div>
+      </div>
+      <!-- end login popup -->
+         <!-- terms and condition popup -->
+      <div class="modal fade tandc-model" id="tandc-model" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h5 class="modal-title text-center">Terms and Condition</h5>
+            </div>
+            <div class="modal-body tandc-model-body text-center">
+                <p>Welcome to our wedding vendor directory! By accessing our website, you agree to be bound by these terms and conditions. Please read them carefully before using our website.</p>
+                
+                
+                <p>Scope of Services: Our website offers a directory of wedding vendors that you can search by category, location, and other criteria. We do not provide any wedding planning or coordination services ourselves, and we do not guarantee the availability or quality of any vendor listed on our website.</p>
+                <p>
+
+Fees: Our website is free to use for customers. However, we may receive a commission or referral fee from vendors for any business we refer to them. These fees are not passed on to our customers.</p>
+                <p>
+
+Vendor Performance: We make every effort to ensure that the vendors listed on our website meet certain quality standards. However, we cannot guarantee the performance of any vendor listed on our website, and we are not responsible for any losses or damages that may occur as a result of using the services of any vendor listed on our website.
+
+</p><p>Intellectual Property: All content and materials on our website, including our logo, trademarks, and other proprietary information, are the property of our company and may not be used or reproduced without our permission.
+
+</p><p>Disclaimer of Liability: To the fullest extent permitted by law, we disclaim any and all liability for any losses, damages, or injuries that may occur as a result of using our website or the services of any vendor listed on our website.
+
+</p><p>Dispute Resolution: Any disputes arising out of or related to these terms and conditions or the use of our website shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association.</p>         
+
+</p>
+
+       
+
+               <asp:Button ID="Button2" runat="server" Text="Accept" CssClass="#Button2 btn btn-default"/>
+            </div>            
+          </div>
+        </div>
+      </div>
+      <!-- end terms and condition popup -->
+      <!-- register popup -->
+      <div class="modal fade register-model" id="register-model" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h5 class="modal-title text-center">Register</h5>
+            </div>
+            <div class="modal-body request-model-body text-center">
+              <a href="CustomerRegister2.aspx" ><label class="form-control btn btn-default">Customer Register</label></a><br /><br />
+             <a href="VendorRegister2.aspx" "><label  class="form-control btn btn-default">Vendor Register</label></a>
+            </div>            
+          </div>
+        </div>
+      </div>
+      <!-- end register popup -->
+    </div>
+  </section>
+<!--  end top bar -->
+<!--  navigation -->
+  <header id="nav-bar" class="nav-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 col-sm-3">
+          <div class="wedding-logo">
+            <a href="Index.aspx"><img src="images/logo.png" class="img-responsive" alt="logo"></a>
+          </div>
+        </div>
+        <div class="col-md-10 col-sm-9">
+          <div class="navigation">
+            <div id="cssmenu">
+              <ul class="css-menu">
+                <li class="active"><a href="Index.aspx">Home</a></li>   
+                <li><a href="About.aspx">About</a></li> 
+                <li><a href="#">Gallery<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <ul class="sub-menu">
+                    <li><a href="Wedding_Images.aspx">Wedding Images</a></li>
+                    <li><a href="Couple_Images.aspx">Couple Images</a></li>
+                  </ul>
+                </li>                   
+                <li><a href="FAQ.aspx">FAQ</a></li> 
+                <li><a href="Help.aspx">Help</a></li>    
+                <li><a href="Contact.aspx">Contact</a></li>                       
+              </ul>
+            </div>
+          </div>
+        </div>        
+      </div>
+    </div>
+  </header> 
+<!--  end navigation -->
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <!-- footer -->
+  <div id="footer" class="footer-main-block">
+    <div class="container">
+      <div class="footer-block">
+        <div class="row">
+          <div class="col-md-4 col-sm-6">
+            <div class="about-widget footer-widget">
+              <h4 class="footer-heading">About Weddlist</h4>
+              <div class="about-dtl">
+                <p>wedlist helps couples find their perfect wedding vendors for their special day in just a few clicks!</p>
+                <p> Find venues, caterers, photographers and more to bring together your dream wedding.</p>
+                <a href="#" class="btn btn-white">Find a Vendor</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 col-sm-6">
+            <div class="news-widget footer-widget">
+              <h4 class="footer-heading">Latest News</h4>
+              <ul>
+                <li>
+                  <div class="row"> 
+                    <div class="col-xs-3">
+                      <div class="latest-news-img">
+                        <img src="images/footer-news-1.jpg" class="img-responsive" alt="news">
+                      </div>
+                    </div>
+                    <div class="col-xs-9">
+                      <div class="latest-news-dtl">
+                        <a href="#">We are going to add new shopping section for diffrent occation.</a>
+                        <div class="date">March 22, 2017</div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row"> 
+                    <div class="col-xs-3">
+                      <div class="latest-news-img">
+                        <img src="images/footer-news-2.jpg" class="img-responsive" alt="news">
+                      </div>
+                    </div>
+                    <div class="col-xs-9">
+                      <div class="latest-news-dtl">
+                        <a href="#">Hospitality charges will be included in catering charges.</a>
+                        <div class="date">March 21, 2017</div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="subscribe-widget footer-widget">
+              <h4 class="footer-heading">Subscribe Newsletter</h4>
+              <form id="subscribe-form" class="subscribe-form">
+                <div class="form-group"> 
+                  <input type="email" id="mc-email" class="form-control" placeholder="EMAIL ADDRESS">
+                  <button type="submit" class="btn btn-white">Subscribe Now</button>
+                  <label for="mc-email"></label>
+                </div>
+              </form>
+              <ul class="social-btns">
+                <li><a class="btn facebook" href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="btn twitter" href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="btn pinterest" href="https://www.pinterest.com/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright-block text-center">
+      <div class="container">
+        <p>&copy; 2017 All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+<!-- end footer -->
+<!-- jquery -->
+<script type="text/javascript" src="js/jquery.min.js"></script>  <!-- jquery library js -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script> <!-- bootstrap js -->
+<script type="text/javascript" src="js/owl.carousel.js"></script> <!-- owl carousel js -->
+<script type="text/javascript" src="js/jquery.ajaxchimp.js"></script> <!-- mail chimp js -->
+<script type="text/javascript" src="js/smooth-scroll.js"></script> <!-- smooth scroll js -->
+<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script> <!-- magnify popup js --> 
+<script type="text/javascript" src="js/waypoints.min.js"></script> <!-- facts count js required for jquery.counterup.js file -->
+<script type="text/javascript" src="js/jquery.counterup.js"></script> <!-- facts count js-->
+<script type="text/javascript" src="js/menumaker.js"></script> <!-- menu js--> 
+<script type="text/javascript" src="js/jquery.share-tooltip.js"></script> <!-- share tooltip js--> 
+<script type="text/javascript" src="js/price-slider.js"></script> <!-- price slider / filter js-->
+<script type="text/javascript" src="js/bootstrap-datepicker.js"></script> <!-- datepicker js-->
+<!-- revolution js files -->
+<script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min.js"></script>  
+<script type="text/javascript" src="revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script type="text/javascript" src="revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script type="text/javascript" src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script type="text/javascript" src="revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script type="text/javascript" src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script type="text/javascript" src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<!-- end revolution js files -->
+<script type="text/javascript" src="js/theme.js"></script> <!-- custom js -->  
+<script type="text/javascript">
+    var tpj = jQuery;
+    var revapi1066;
+    tpj(document).ready(function () {
+        if (tpj("#rev_slider_1066_1").revolution == undefined) {
+            revslider_showDoubleJqueryError("#rev_slider_1066_1");
+        }
+        else {
+            revapi1066 = tpj("#rev_slider_1066_1").show().revolution({
+                sliderType: "standard",
+                jsFileLocation: "//server.local/revslider/wp-content/plugins/revslider/public/assets/js/",
+                sliderLayout: "auto",
+                delay: 9000,
+                navigation: {
+                    keyboardNavigation: "off",
+                    keyboard_direction: "horizontal",
+                    mouseScrollNavigation: "off",
+                    mouseScrollReverse: "default",
+                    onHoverStop: "off",
+                    touch: {
+                        touchenabled: "off",
+                        swipe_threshold: 75,
+                        swipe_min_touches: 1,
+                        swipe_direction: "horizontal",
+                        drag_block_vertical: false
+                    },
+                    arrows: {
+                        style: "",
+                        enable: true,
+                        hide_onmobile: true,
+                        hide_onleave: false,
+                        hide_delay: 0,
+                        hide_delay_mobile: 1200,
+                        hide_under: 0,
+                        hide_over: 9999,
+                        tmp: '',
+                        rtl: false,
+                        left: {
+                            h_align: "left",
+                            v_align: "center",
+                            h_offset: 20,
+                            v_offset: 0,
+                            container: "slider",
+                        },
+                        right: {
+                            h_align: "right",
+                            v_align: "center",
+                            h_offset: 20,
+                            v_offset: 0,
+                            container: "slider",
+                        }
+                    }
+                },
+                responsiveLevels: [1240, 1024, 778, 480],
+                visibilityLevels: [1240, 1024, 778, 480],
+                gridwidth: [1240, 1024, 778, 480],
+                gridwidth: 1000,
+                gridheight: [868, 768, 960, 720],
+                lazyType: "none",
+                parallax: {
+                    type: "mouse",
+                    origo: "slidercenter",
+                    speed: 2000,
+                    levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50, 46, 47, 48, 49, 50, 55],
+                    type: "mouse",
+                    disable_onmobile: "on"
+                },
+                shadow: 0,
+                spinner: "off",
+                stopLoop: "off",
+                stopAfterLoops: 1,
+                stopAtSlide: 0,
+                shuffle: "off",
+                autoHeight: "off",
+                fullScreenAutoWidth: "off",
+                fullScreenAlignForce: "off",
+                fullScreenOffsetContainer: ".header",
+                fullScreenOffset: "60px",
+                disableProgressBar: "on",
+                hideThumbsOnMobile: "off",
+                hideSliderAtLimit: 0,
+                hideCaptionAtLimit: 0,
+                hideAllCaptionAtLilmit: 0,
+                debugMode: false,
+                fallbacks: {
+                    simplifyAll: "off",
+                    nextSlideOnWindowFocus: "off",
+                    disableFocusListener: false,
+                }
+            });
+        }
+    });
+</script>
+<!-- end jquery -->
+    </div>
+    </form>
+</body>
+</html>
